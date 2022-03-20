@@ -1,7 +1,9 @@
 name: widget_visibility_detector
-description: A new Flutter package project.
-version: 0.0.1
-homepage:
+description: A new Flutter package can detect when the widget appears or disappears.
+version: 1.0.0
+homepage: https://github.com/tbm98/widget_visibility_detector
+repository: https://github.com/tbm98/widget_visibility_detector
+issue_tracker: https://github.com/tbm98/widget_visibility_detector/issues
 
 environment:
   sdk: ">=2.16.1 <3.0.0"
@@ -10,6 +12,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  visibility_detector: ^0.2.2
 
 dev_dependencies:
   flutter_test:
