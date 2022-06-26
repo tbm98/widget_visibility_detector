@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widget_visibility_detector/widget_visibility_detector.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -57,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             FloatingActionButton(
               heroTag: '1',
               onPressed: () {
-                print('hihi${StackTrace.current}');
+                print('hihi');
                 setState(() {
                   index = 1;
                 });
@@ -73,18 +72,18 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Icon(Icons.add),
             ),
-            // FloatingActionButton(
-            //   heroTag: '3',
-            //   onPressed: () {
-            //     // setState(() {
-            //     //   index = 0;
-            //     // });
-            //     Navigator.push(context, MaterialPageRoute(builder: (context) {
-            //       return Page2();
-            //     }));
-            //   },
-            //   child: Icon(Icons.ac_unit),
-            // ),
+            FloatingActionButton(
+              heroTag: '3',
+              onPressed: () {
+                // setState(() {
+                //   index = 0;
+                // });
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Page2();
+                }));
+              },
+              child: Icon(Icons.ac_unit),
+            ),
           ],
         ), // This trailing comma makes auto-formatting nicer for build methods.
       ),

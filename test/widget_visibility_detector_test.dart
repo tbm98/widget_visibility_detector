@@ -50,7 +50,6 @@ void main() {
       ))));
     }
 
-
     await tester.pumpWidget(MaterialApp(
       home: _page1(),
     ));
@@ -60,20 +59,17 @@ void main() {
     expect(disappear2, 0);
 
     await tester.tap(find.text('click'));
-    await tester.pumpAndSettle();
+    await tester.pumpAndSettle(const Duration(milliseconds: 300));
     expect(appear, 1);
     expect(disappear, 1);
     expect(appear2, 1);
     expect(disappear2, 0);
 
     await tester.tap(find.text('back'));
-    await tester.pumpAndSettle();
+    await tester.pumpAndSettle(const Duration(milliseconds: 300));
     expect(appear, 2);
     expect(disappear, 1);
     expect(appear2, 1);
     expect(disappear2, 1);
-
-    // expect(appear, 1);
-    // expect(disappear, 0);
   });
 }
