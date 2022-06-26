@@ -16,7 +16,8 @@ class WidgetVisibilityDetector extends StatefulWidget {
   final VoidCallback? onDisappear;
 
   @override
-  _WidgetVisibilityDetectorState createState() => _WidgetVisibilityDetectorState();
+  State<WidgetVisibilityDetector> createState() =>
+      _WidgetVisibilityDetectorState();
 }
 
 class _WidgetVisibilityDetectorState extends State<WidgetVisibilityDetector>
@@ -26,13 +27,13 @@ class _WidgetVisibilityDetectorState extends State<WidgetVisibilityDetector>
 
   @override
   void initState() {
-    WidgetsBinding.instance?.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
     super.initState();
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance?.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
